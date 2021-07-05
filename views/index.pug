@@ -2,12 +2,13 @@ extends layout
 
 block content
   h1= title
-  
-  div(class='message')
-    ul 
-    each m in messages
-        li= m.text
-        li= m.user
-        li= m.added
-        br
   a(href ="/new") New Message
+  div(class='message')
+    ul(class = 'massageCard')
+    each m in messages
+      div(class = 'messageCard')
+        li(id = 'userName')= m.user
+        li(id = 'textContent')= m.text
+        li(id = 'dateAdded')= m.added
+        br
+  
