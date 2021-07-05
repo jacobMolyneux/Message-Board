@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  
+  div(class='message')
+    ul 
+    each m in messages
+        li= m.text
+        li= m.user
+        li= m.added
+        br
+  a(href ="/new") New Message
