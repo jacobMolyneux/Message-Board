@@ -1,14 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  a(href ="/new") New Message
-  div(class='message')
-    ul(class = 'massageCard')
-    each m in messages
-      div(class = 'messageCard')
-        li(id = 'userName')= m.user
-        li(id = 'textContent')= m.text
-        li(id = 'dateAdded')= m.added
-        br
+  div(id ="container")
+    div(id = "topLevelDiv")
+      h1= title
+      a(href ="/new") New Message
+    div(class='message')
+      ul(class = 'massageCard')
+      each m in messages
+        div(class = 'messageCard')
+          li(id = 'userName')= m.user
+          li(id = 'textContent')= m.text
+          li(id = 'dateAdded')= m.added
+          br
   

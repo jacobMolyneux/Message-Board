@@ -1,9 +1,10 @@
 extends layout
 
 block content
+    div(id ='formPageContainer')
         form(method = 'POST' action = 'new' class = 'form')
-            label(for = 'input') Username
+            label(for = 'input') Username:
             input(type = "text" name = 'username')
-            label(for = "message") Enter a Message
+            label(for = "message") Enter a Message:
             input(type = 'text' name = 'message')
-            button(enabled type = 'submit') Submit 
+            button(enabled type = 'submit' id ='submitMessageButton') Submit 
